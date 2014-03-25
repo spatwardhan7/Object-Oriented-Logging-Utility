@@ -7,12 +7,12 @@ RANLIB  = ranlib
 
 LIBRARY = logutility.a
 
-LIB_SRC = logutility.c
+LIB_SRC = logutility.cpp
 
-LIB_OBJ = $(patsubst %.c,%.o,$(LIB_SRC))
+LIB_OBJ = $(patsubst %.cpp,%.o,$(LIB_SRC))
 
 # pattern rule for object files
-%.o: %.c
+%.o: %.cpp
 	$(CC) -c $(CFLAGS) $< -o $@
 
 all: $(LIBRARY)
